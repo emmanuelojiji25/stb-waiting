@@ -1,5 +1,5 @@
 import "./App.css";
-import logo from "./logo.svg";
+import logo from "./logo.gif";
 import { db } from "./firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
@@ -35,7 +35,13 @@ function App() {
             onChange={(e) => setEmail(e.target.value)}
           />
           <button onClick={() => handleSendEmail()}>REMIND ME</button>
+          <div className="anna-container">
+            <div class="anna"></div>
+            <p>Meet Anna</p>
+          </div>
         </div>
+
+        <p className="privacy-policy">Privacy Policy</p>
       </main>
     </div>
   );
