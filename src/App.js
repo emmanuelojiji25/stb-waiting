@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./logo.svg";
+import { db } from "./firebase";
+import { addDoc, collection } from "firebase/firestore";
+import { useState } from "react";
 
 function App() {
+  const [email, setEmail] = useState("");
+
+  const handleSendEmail = async () => {
+    try {
+      const emailsRef = collection(db, "emails");
+      await addDoc(emailsRef, {
+        email: email,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <div class="main-content">
+          <img src={logo} class="logo" />
+          <h1>FIGHT TO BE SEEN!</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            dapibus, metus at ornare dapibus, nibh tellus iaculis nunc, in
+            rutrum ex orci sed sem.
+          </p>
+          <input
+            id="emailInput"
+            type="text"
+            placeholder="Enter Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button onClick={() => handleSendEmail()}>REMIND ME</button>
+        </div>
+      </main>
     </div>
   );
 }

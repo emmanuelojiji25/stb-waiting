@@ -1,13 +1,82 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  display: flex;
+  flex-direction: column;
+  background: rgb(14, 14, 14);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 100%;
+}
+
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-family: "arupala grotesk";
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  color: white;
+  margin-bottom: 10px;
+}
+
+main p {
+  color: rgb(175, 175, 175);
+  font-family: arial;
+  font-weight: 100;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+input {
+  height: 50px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 30px;
+  border-radius: 3px;
+  padding-left: 12px;
+  border: solid 1px rgb(160, 160, 160);
+  background: none;
+  color: white;
+}
+
+.test {
+  display: none;
+}
+
+button {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  background: #00ffb7;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: black;
 }
