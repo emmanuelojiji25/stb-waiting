@@ -3,9 +3,11 @@ import logo from "./logo.gif";
 import { db } from "./firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
+import Anna from "./Anna";
 
 function App() {
   const [email, setEmail] = useState("");
+  const [isAnnaVisible, setIsAnnaVisible] = useState(false);
 
   const handleSendEmail = async () => {
     try {
@@ -21,6 +23,7 @@ function App() {
     <div className="App">
       <main>
         <div class="main-content">
+          {isAnnaVisible && <Anna close={() => setIsAnnaVisible(false)} />}
           <img src={logo} class="logo" />
           <h1>FIGHT TO BE SEEN!</h1>
           <p>
@@ -37,7 +40,7 @@ function App() {
           <button onClick={() => handleSendEmail()}>REMIND ME</button>
           <div className="anna-container">
             <div class="anna"></div>
-            <p>Meet Anna</p>
+            <p onClick={() => setIsAnnaVisible(true)}>Meet Anna</p>
           </div>
         </div>
 
