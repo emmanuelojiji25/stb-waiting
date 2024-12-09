@@ -39,7 +39,9 @@ function App() {
           />
           <button onClick={() => handleSendEmail()}>REMIND ME</button>
           <div className="anna-container">
-            <div class="anna"></div>
+            <div class="anna">
+              <i class="fa-solid fa-user"></i>
+            </div>
             <p onClick={() => setIsAnnaVisible(true)}>Meet Anna</p>
           </div>
         </div>
