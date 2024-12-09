@@ -15,14 +15,24 @@
     background: rgb(44, 44, 44);
     padding: 50px;
     max-width: 500px;
+    width: 100%;
+    border-radius: 3px;
+
 }
 
 .anna-modal h2{
-    margin-bottom: 20px;
     color: white;
 }
 
 .Typewriter__wrapper{
     color: white;
     font-family: arial;
+}
+
+.anna-p, .Typewriter__wrapper{
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
 }

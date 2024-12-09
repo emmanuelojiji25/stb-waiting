@@ -8,6 +8,7 @@ import Anna from "./Anna";
 function App() {
   const [email, setEmail] = useState("");
   const [isAnnaVisible, setIsAnnaVisible] = useState(false);
+  const [hasUserOpenedAnna, setHasUserOpenedAnna] = useState(false);
 
   const handleSendEmail = async () => {
     try {
@@ -19,11 +20,24 @@ function App() {
       console.log(error);
     }
   };
+
+  const handleOpenAnna = () => {
+    setIsAnnaVisible(true);
+
+    setTimeout(() => {
+      setHasUserOpenedAnna(true);
+    }, 30000);
+  };
   return (
     <div className="App">
       <main>
         <div class="main-content">
-          {isAnnaVisible && <Anna close={() => setIsAnnaVisible(false)} />}
+          {isAnnaVisible && (
+            <Anna
+              close={() => setIsAnnaVisible(false)}
+              hasUserOpenedAnna={hasUserOpenedAnna}
+            />
+          )}
           <img src={logo} class="logo" />
           <h1>FIGHT TO BE SEEN!</h1>
           <p>
@@ -38,11 +52,11 @@ function App() {
             onChange={(e) => setEmail(e.target.value)}
           />
           <button onClick={() => handleSendEmail()}>REMIND ME</button>
-          <div className="anna-container">
+          <div className="anna-container" onClick={() => handleOpenAnna()}>
             <div class="anna">
               <i class="fa-solid fa-user"></i>
             </div>
-            <p onClick={() => setIsAnnaVisible(true)}>Meet Anna</p>
+            <p>Meet Anna</p>
           </div>
         </div>
 
