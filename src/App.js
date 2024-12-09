@@ -56,11 +56,19 @@ function App() {
             <div class="anna">
               <i class="fa-solid fa-user"></i>
             </div>
-            <p>Meet Anna</p>
+            <p>Meet Anna, your agent.</p>
           </div>
         </div>
 
-        <p className="privacy-policy">Privacy Policy</p>
+        <div>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <div className="footer">
+          <p>FAQ</p>
+          <p className="privacy-policy">Privacy Policy</p>
+        </div>
       </main>
     </div>
   );
