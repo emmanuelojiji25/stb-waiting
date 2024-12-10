@@ -5,7 +5,7 @@ const Anna = ({ close, hasUserOpenedAnna }) => {
   return (
     <div className="anna-modal-container">
       <div className="anna-modal">
-        <h2>Hi! I'm Anna</h2>
+        <h2>Hi! I'm Anna.</h2>
 
         {!hasUserOpenedAnna ? (
           <div className="typewriter-container">

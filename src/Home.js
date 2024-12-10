@@ -65,7 +65,10 @@ const Home = () => {
           {signUpSuccessful && (
             <>
               <ConfettiExplosion />
-              <h2 className="success">Welcome, fighter! See you soon.</h2>
+              <h2 className="success">
+                You're officially in! Sharpen those skills, the challenge
+                awaits.
+              </h2>
             </>
           )}
           <div className="anna-container" onClick={() => handleOpenAnna()}>
