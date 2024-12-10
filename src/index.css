@@ -30,3 +30,8 @@ p, ul, li {
 li {
   list-style-position: inside;
 }
+
+a{
+  color: initial;
+  text-decoration: none;
+}
