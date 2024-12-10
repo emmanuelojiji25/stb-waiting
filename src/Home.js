@@ -66,7 +66,7 @@ const Home = () => {
             <>
               <ConfettiExplosion />
               <h2 className="success">
-                You're officially in! Sharpen those skills, the challenge
+                You're officially in! Sharpen those skills, a challenge
                 awaits.
               </h2>
             </>
