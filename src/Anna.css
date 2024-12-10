@@ -1,46 +1,46 @@
-.anna-modal-container{
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 2%;
-    padding-right: 2%;
+.anna-modal-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-.anna-modal{
-    background: rgb(44, 44, 44);
-    padding: 50px;
-    max-width: 500px;
-    width: 100%;
-    border-radius: 3px;
+.anna-modal {
+  background: rgb(44, 44, 44);
+  padding: 50px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 3px;
 }
 
-.anna-modal h2{
-    color: white;
+.anna-modal h2 {
+  color: white;
 }
 
-.Typewriter__wrapper{
-    color: white;
-    font-family: arial;
+.Typewriter__wrapper {
+  color: white;
+  font-family: arial;
 }
 
-.typewriter-container{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.typewriter-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.Typewriter__cursor{
-    color: white;
+.Typewriter__cursor {
+  color: white;
 }
 
-.anna-p{
-    color: white;
-    font-size: 16px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    display: block;
+.anna-p {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: block;
 }

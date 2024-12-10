@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
         <h2>How We Use Your Information</h2>
         <p>We use your email address to:</p>
         <ul>
-          <li>Send you updates about [Your Platform or Service].</li>
+          <li>Send you updates about Self Tape Battle.</li>
           <li>Inform you about the launch and any related news or offers.</li>
         </ul>
         <p>
@@ -98,7 +98,7 @@ const PrivacyPolicy = () => {
           If you have any questions about this Privacy Policy or how we handle
           your data, please contact us at:
         </p>
-        <p>Email: info@selftapebattle</p>
+        <p>Email: info@selftapebattle.com</p>
       </div>
 
       <div className="text-block">
