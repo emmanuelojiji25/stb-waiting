@@ -66,8 +66,7 @@ const Home = () => {
             <>
               <ConfettiExplosion />
               <h2 className="success">
-                You're officially in! Sharpen those skills, a challenge
-                awaits.
+                You're officially in! Sharpen those skills, a challenge awaits.
               </h2>
             </>
           )}
@@ -85,6 +84,12 @@ const Home = () => {
           </Link>
           <Link to="https://www.instagram.com/selftapebattle" target="_blank">
             <i class="fa-brands fa-instagram"></i>
+          </Link>
+          <Link
+            to="https://www.facebook.com/people/Self-Tape-Battle/61569850892948/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook"></i>
           </Link>
         </div>
 
