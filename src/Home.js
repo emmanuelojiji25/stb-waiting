@@ -59,7 +59,7 @@ const Home = () => {
                 placeholder="Enter Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <button onClick={() => handleSendEmail()}>REMIND ME</button>{" "}
+              <button onClick={() => handleSendEmail()}>KEEP ME UPDATED</button>{" "}
             </>
           )}
           {signUpSuccessful && (
