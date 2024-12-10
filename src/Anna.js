@@ -5,25 +5,29 @@ const Anna = ({ close, hasUserOpenedAnna }) => {
   return (
     <div className="anna-modal-container">
       <div className="anna-modal">
-        <h2>Hey, I'm Anna</h2>
+        <h2>Hi! I'm Anna</h2>
 
         {!hasUserOpenedAnna ? (
-          <Typewriter
-            options={{
-              strings: [
-                "I'll be your in-game agent and mentor, here to guide you through all your battles. The battle arena is under construction, but don't sit idle—sharpen your swords, hone your skills, and get ready to win. I'll see you in the arena soon!",
-              ],
-              autoStart: true,
-              loop: false,
-              pauseFor: 100000000,
-            }}
-          />
+          <div className="typewriter-container">
+            <Typewriter
+              options={{
+                strings: [
+                  " You're finally here. I'll be your in-game agent and mentor, here to guide you through all your battles. The battle arena is under construction, but that’s no excuse to sit back. Use this time wisely—sharpen your swords, hone your skills, and get ready to win. I'll see you soon!",
+                ],
+                autoStart: true,
+                loop: false,
+                pauseFor: 100000000,
+                delay: 80,
+              }}
+            />
+          </div>
         ) : (
           <p className="anna-p">
-            I'll be your in-game agent and mentor, here to guide you through all
-            your battles. The battle arena is under construction, but don't sit
-            idle—sharpen your swords, hone your skills, and get ready to win.
-            I'll see you in the arena soon!,
+            You're finally here. I'll be your in-game agent and mentor, here to
+            guide you through all your battles. The battle arena is under
+            construction, but that’s no excuse to sit back. Use this time
+            wisely—sharpen your swords, hone your skills, and get ready to win.
+            I'll see you soon!
           </p>
         )}
 
