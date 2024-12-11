@@ -74,7 +74,7 @@ const Home = () => {
             <div class="anna">
               <i class="fa-solid fa-user"></i>
             </div>
-            <p>Meet Anna, your no-nonsene agent.</p>
+            <p>Meet Anna, your no-nonsense agent.</p>
           </div>
         </div>
 
