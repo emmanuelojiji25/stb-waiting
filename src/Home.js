@@ -31,7 +31,7 @@ const Home = () => {
 
     setTimeout(() => {
       setHasUserOpenedAnna(true);
-    }, 30000);
+    }, 27000);
   };
   return (
     <div className="App">
