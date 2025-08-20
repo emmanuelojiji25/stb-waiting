@@ -11,8 +11,19 @@ body {
 }
 
 .logo {
-  width: 170px;
-  margin-bottom: 100px;
+  width: 80px;
+  margin-bottom: 15px;
+  animation: spin 3s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 h1,
@@ -23,7 +34,9 @@ h4 {
 }
 
 a,
-p, ul, li {
+p,
+ul,
+li {
   font-family: arial;
 }
 
@@ -31,7 +44,7 @@ li {
   list-style-position: inside;
 }
 
-a{
+a {
   color: initial;
   text-decoration: none;
 }
