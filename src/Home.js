@@ -13,7 +13,7 @@ const Home = () => {
       <main>
         <div class="main-content">
           <img src={logo} className="logo"/>
-          <p>We're building the arena..</p>
+          <p>The arena is almost ready..</p>
         </div>
       </main>
     </div>
