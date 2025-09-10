@@ -4,17 +4,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  background: rgb(14, 14, 14);
 }
 
-.logo {
-  width: 80px;
-  margin-bottom: 15px;
-  animation: spin 3s infinite;
-}
+
 
 @keyframes spin {
   0% {

@@ -1,0 +1,128 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 2%;
+  padding-right: 2%;
+  min-height: 100svh;
+}
+
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2%;
+}
+
+main h1 {
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  line-height: 1;
+  color: white;
+  margin-bottom: 10px;
+}
+
+main p {
+  color: rgb(175, 175, 175);
+  font-family: arial;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+input {
+  height: 50px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 30px;
+  border-radius: 3px;
+  padding-left: 12px;
+  border: none;
+  background: white;
+  border-radius: 15px;
+  color: white;
+}
+
+.test {
+  display: none;
+}
+
+button {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  background: #00ffb7;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bolder;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.success {
+  color: white;
+}
+.about {
+  min-height: 100svh;
+  text-align: center;
+}
+
+.faq-container {
+  min-height: 100svh;
+  width: 100%;
+  color: white;
+}
+
+.category-container {
+  margin-top: 30px;
+
+  h2 {
+    margin-bottom: 12px;
+  }
+}
+
+.waitlist {
+  color: #567bf7;
+}
+
+.waitlist-container {
+  transform: translateX(-60px);
+  margin-top: 10px;
+}
+
+.billboard {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.how-it-works {
+  min-height: 100svh;
+  h1 {
+    margin-bottom: 50px;
+  }
+}
+
+.box {
+  width: 100%;
+  background: #101626;
+  margin-bottom: 20px;
+  color: white;
+  padding: 40px;
+
+  h4 {
+    margin-bottom: 12px;
+  }
+}

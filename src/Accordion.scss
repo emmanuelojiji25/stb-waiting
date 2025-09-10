@@ -1,0 +1,28 @@
+.Accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.question {
+  background: #101626;
+  padding: 15px 10px;
+  width: 100%;
+  color: white;
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  color: white;
+}
+
+.open {
+  height: 100%;
+  margin-bottom: 25px;
+}
+
+.closed {
+  height: 0;
+}
