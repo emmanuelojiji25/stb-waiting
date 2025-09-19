@@ -74,6 +74,21 @@ const Home = () => {
 
   const [email, setEmail] = useState("");
 
+  const [view, setView] = useState(0);
+
+  const handleSlide = (direction) => {
+    console.log("clicked");
+    if (direction === "up" && view > 0) {
+      setView(view - 1);
+      console.log("up");
+    }
+
+    if (direction === "down" && view < 3) {
+      setView(view + 1);
+      console.log("down");
+    }
+  };
+
   const handleSignUp = async () => {
     try {
       const ref = doc(db, "mailing", email);
@@ -91,7 +106,14 @@ const Home = () => {
     <div className="App">
       <Header />
       <main>
-        <div class="main-content">
+        <div className="arrow-container">
+          <button onClick={() => handleSlide("up")}>Up</button>
+          <button onClick={() => handleSlide("down")}>Down</button>
+        </div>
+        <div
+          className="main-content"
+          style={{ transform: `translateY(-${view * 100}%)` }}
+        >
           <section className="billboard">
             {!isUserSignedUp ? (
               <>

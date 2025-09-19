@@ -6,7 +6,7 @@ main {
   flex: 1;
   padding-left: 2%;
   padding-right: 2%;
-  min-height: 100svh;
+  height: 100%;
 
   p {
     color: #c7d6ff;
@@ -17,12 +17,13 @@ main {
   width: 100%;
   margin: 0 auto;
   max-width: 1200px;
-
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 2%;
+  min-height: 100%;
+  transition: 0.3s ease-in-out;
 }
 
 main h1 {
@@ -39,7 +40,6 @@ main h1 {
   align-items: center;
   background: white;
   border-radius: 10px;
-
 }
 
 input {
@@ -71,7 +71,6 @@ button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   margin: 8px;
-
 }
 
 .success {
@@ -135,4 +134,18 @@ button {
   h4 {
     margin-bottom: 12px;
   }
+}
+
+section {
+  min-height: 100%;
+}
+
+.arrow-container {
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 30px;
+  z-index: 50000;
 }
