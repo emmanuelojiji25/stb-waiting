@@ -1,7 +1,7 @@
 import "./Home.scss";
 import logo from "./star.svg";
 import { db } from "./firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import Anna from "./Anna";
 import { Link } from "react-router-dom";
@@ -69,10 +69,24 @@ const content = [
   },
 ];
 
-const handleSignUp = () => {};
-
 const Home = () => {
   const [isUserSignedUp, setIsUserSignedUp] = useState(false);
+
+  const [email, setEmail] = useState("");
+
+  const handleSignUp = async () => {
+    try {
+      const ref = doc(db, "mailing", email);
+
+      await setDoc(ref, {
+        email: email,
+      });
+
+      setIsUserSignedUp(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="App">
       <Header />
@@ -87,7 +101,14 @@ const Home = () => {
                   — turning self-tapes into exciting battles with coins, prizes,
                   and a growing community of actors and casting directors.{" "}
                 </p>
-                <input type="text" placeholder="Enter email" />
+                <div className="input-container">
+                  <input
+                    type="text"
+                    placeholder="Enter email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <button onClick={() => handleSignUp()}>go</button>
+                </div>
                 <div class="waitlist-container">
                   <img src={arrow} />
                   <p className="waitlist">Join the waitlist</p>
@@ -95,7 +116,9 @@ const Home = () => {
               </>
             ) : (
               <>
+                <ConfettiExplosion />
                 <h1>You're in!</h1>
+                <p>We'll keep you updated via email.</p>
               </>
             )}
           </section>

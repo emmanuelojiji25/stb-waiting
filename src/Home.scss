@@ -7,6 +7,10 @@ main {
   padding-left: 2%;
   padding-right: 2%;
   min-height: 100svh;
+
+  p {
+    color: #c7d6ff;
+  }
 }
 
 .main-content {
@@ -28,24 +32,25 @@ main h1 {
   margin-bottom: 10px;
 }
 
-main p {
-  color: rgb(175, 175, 175);
-  font-family: arial;
-  font-weight: 100;
-  font-size: 16px;
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+
 }
 
 input {
   height: 50px;
   width: 100%;
-  max-width: 300px;
-  margin-top: 30px;
   border-radius: 3px;
-  padding-left: 12px;
   border: none;
-  background: white;
+  background: none;
   border-radius: 15px;
-  color: white;
+  color: black;
+  padding-left: 12px;
 }
 
 .test {
@@ -54,18 +59,19 @@ input {
 
 button {
   width: 100%;
-  max-width: 300px;
+  max-width: 50px;
   height: 50px;
   background: #00ffb7;
-  margin-top: 10px;
   border: 0;
-  border-radius: 3px;
+  border-radius: 5px;
   font-weight: bolder;
   font-size: 15px;
   text-transform: uppercase;
   color: black;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  margin: 8px;
+
 }
 
 .success {
@@ -74,6 +80,10 @@ button {
 .about {
   min-height: 100svh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .faq-container {
