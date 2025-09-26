@@ -189,21 +189,15 @@ const Home = () => {
           <section className="about" id="about">
             <h1>About</h1>
             <p>
-              Hey, I'm Emmanuel Ojiji. Founder of Self Tape Battle, and
-              currently wearing all other hats.
-              <br />
-              <br />
-              As an actor, product designer and developer - My aim has always
-              been to develop something new and exciting for the industry.{" "}
-              <br />
-              <br />
-              This industry can be extremely cut-throat, expensive, and
-              non-rewarding. I felt there weren't enough outlets for actors to
-              just have fun and get something back.
-              <br />
-              <br />
-              This is an exciting passion project for me, and I look forward to
-              you using it.
+              Hi, I’m Emmanuel, the founder of Self Tape Battle. As both an
+              actor and a designer, I wanted to create something fresh for our
+              industry—a space where actors can compete, grow, and get rewarded
+              while doing what they love. Acting can often feel isolating,
+              expensive, and cut-throat. Self Tape Battle flips that on its head
+              by making auditions fun, social, and rewarding. This started as my
+              passion project, but it’s really about building a community that
+              inspires and supports each other. I can’t wait to see you in the
+              arena.
             </p>
           </section>
 
