@@ -103,6 +103,14 @@ button {
 .waitlist {
   color: #567bf7;
   margin-top: 0 !important;
+  font-weight: bold;
+  transform: translateX(-30px);
+}
+
+.arrow {
+  width: 80px;
+  transform: rotate(-50deg);
+  margin-bottom: 20px;
 }
 
 .waitlist-container {
@@ -118,8 +126,7 @@ button {
   justify-content: center;
   text-align: center;
 
-
-  p{
+  p {
     margin-top: 20px;
     margin-bottom: 30px;
   }

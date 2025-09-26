@@ -135,7 +135,7 @@ const Home = () => {
                   <button onClick={() => handleSignUp()}>go</button>
                 </div>
                 <div class="waitlist-container">
-                  <img src={arrow} />
+                  <img src={arrow} className="arrow" />
                   <p className="waitlist">Join the waitlist</p>
                 </div>
               </>
@@ -143,7 +143,10 @@ const Home = () => {
               <>
                 <ConfettiExplosion />
                 <h1>You're in!</h1>
-                <p>We'll keep you updated via email.</p>
+                <p>
+                  We'll keep you updated via email. We can't wait to see you in
+                  the Arena.
+                </p>
               </>
             )}
           </section>
