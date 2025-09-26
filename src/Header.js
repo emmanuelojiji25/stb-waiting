@@ -17,9 +17,15 @@ const Header = () => {
       </header>
       <div className={`menu ${isMenuOpen ? "menu-open" : "menu-closed"}`}>
         <nav>
-          <a href="#home">Home</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#about">About</a>
+          <a href="#home" onClick={() => handleLinkClick()}>
+            Home
+          </a>
+          <a href="#how-it-works" onClick={() => handleLinkClick()}>
+            How it works
+          </a>
+          <a href="#about" onClick={() => handleLinkClick()}>
+            About
+          </a>
           <a href="#faq" onClick={() => handleLinkClick()}>
             FAQ
           </a>
