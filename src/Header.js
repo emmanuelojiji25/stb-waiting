@@ -13,13 +13,13 @@ const Header = () => {
     <>
       <header onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <img src={logo} className="logo" />
-        Menu
+        <i class="fa-solid fa-bars menu-bar"></i>
       </header>
       <div className={`menu ${isMenuOpen ? "menu-open" : "menu-closed"}`}>
         <nav>
-          <a href="home">Home</a>
-          <a href="home">How it works</a>
-          <a href="home">About</a>
+          <a href="#home">Home</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#about">About</a>
           <a href="#faq" onClick={() => handleLinkClick()}>
             FAQ
           </a>

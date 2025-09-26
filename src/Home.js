@@ -13,7 +13,7 @@ const general = [
   {
     question: "What is Self Tape Battle",
     answer:
-      " Self Tape Battle is the first weekly self-tape competition app where actors compete in fun challenges, earn votes, and win prizes. It’s part competition, part portfolio builder, and part networking tool — designed to keep your craft sharp and your profile visible.",
+      " Self Tape Battle is the first acting game  where actors compete in self tape challenges, earn votes, and win prizes. It’s part competition, part portfolio builder, and part networking tool — designed to keep your craft sharp and keep you rewarded.",
   },
 
   {
@@ -29,13 +29,12 @@ const general = [
         <p>
           Any actor based in the UK (for now). Whether you’re just starting out
           or you’ve been on stage and screen for years, Self Tape Battle is for
-          you. "
+          you.
         </p>
         <h3>Casting Directors</h3>
         <p>
-          Any actor based in the UK (for now). Whether you’re just starting out
-          or you’ve been on stage and screen for years, Self Tape Battle is for
-          you. "
+          Casting directors who are looking for fresh talent can look through a
+          pool of versatile performances.
         </p>
       </>
     ),
@@ -46,7 +45,7 @@ const voting = [
   {
     question: "What prizes can I win?",
     answer:
-      "From acting-related goodies to in-app coins that can be cashed out — prizes change each battle. Our launch battles prizes will be an annual Spotlight membership, and a professional headshot session.",
+      "From acting-related goodies to in-app coins that can be cashed out — prizes change each battle. For our launch battles, prizes will include an annual Spotlight membership, and a professional headshot session.",
   },
   {
     question: "How do coins work and how do I cash out?",
@@ -59,7 +58,7 @@ const content = [
   {
     question: "Who can see my self tapes?",
     answer:
-      " You choose. Make your profile public so anyone can view your tapes, or keep it private so only registered users can see them. Casting directors will always be able to view your content",
+      " You choose! Make your profile public so anyone can view your tapes, or keep it private so only registered users can see them. Casting directors will always be able to view your content.",
   },
 
   {
@@ -107,8 +106,12 @@ const Home = () => {
       <Header />
       <main>
         <div className="arrow-container">
-          <button onClick={() => handleSlide("up")}>Up</button>
-          <button onClick={() => handleSlide("down")}>Down</button>
+          <button onClick={() => handleSlide("up")} className="arrow-button">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+          <button onClick={() => handleSlide("down")} className="arrow-button">
+            <i class="fa-solid fa-arrow-down"></i>
+          </button>
         </div>
         <div
           className="main-content"
@@ -145,7 +148,7 @@ const Home = () => {
             )}
           </section>
 
-          <section className="how-it-works">
+          <section className="how-it-works" id="how-it-works">
             <h1>The new industry platform that works for everyone</h1>
 
             <div className="actors">
@@ -180,7 +183,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="about">
+          <section className="about" id="about">
             <h1>About</h1>
             <p>
               Hey, I'm Emmanuel Ojiji. Founder of Self Tape Battle, and

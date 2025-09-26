@@ -25,9 +25,15 @@ header {
   margin-top: 58.5px;
   position: fixed;
   overflow: hidden;
+  
+  padding-right: 20px;
+  text-align: right;
+  font-size: 20px;
+  
 
   nav {
     margin-left: auto;
+    padding-top: 40px;
 
     a {
       display: block;
@@ -42,4 +48,8 @@ header {
 
 .menu-closed {
   height: 0;
+}
+
+.menu-bar{
+  font-size: 25px;
 }
