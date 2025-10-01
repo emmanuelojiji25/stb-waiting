@@ -123,7 +123,7 @@ const Home = () => {
                 <h1>The ultimate acting showdown!</h1>
                 <p>
                   Self Tape Battle is the world’s first competitive acting game
-                  — turning self-tapes into exciting battles with coins, prizes,
+                  — turning self-tapes into exciting weekly battles with coins, prizes,
                   and a growing community of actors and casting directors.{" "}
                 </p>
                 <div className="input-container">
