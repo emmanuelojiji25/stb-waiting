@@ -64,7 +64,7 @@ const content = [
   {
     question: "Do I still own my content if i upload it?",
     answer:
-      "Yes, you own your self tape. More details will be outlined in our terms and conditions on app signup."
+      "Yes, you own your self tape. More details will be outlined in our terms and conditions on app signup.",
   },
 ];
 
@@ -189,15 +189,15 @@ const Home = () => {
           <section className="about" id="about">
             <h1>About</h1>
             <p>
-              Hi, I’m Emmanuel, the founder of Self Tape Battle. As both an
-              actor and a designer, I wanted to create something fresh for our
-              industry—a space where actors can compete, grow, and get rewarded
+              Hi, I’m Emmanuel, the founder of Self Tape Battle. As an actor,
+              designer, and developer, I wanted to create something fresh for our
+              industry. A space where actors can compete, grow, and get rewarded
               while doing what they love. Acting can often feel isolating,
               expensive, and cut-throat. Self Tape Battle flips that on its head
-              by making auditions fun, social, and rewarding. This started as my
-              passion project, but it’s really about building a community that
-              inspires and supports each other. I can’t wait to see you in the
-              arena.
+              by making self tapes fun, social, and rewarding. This started as
+              my passion project, but it’s really about building a community
+              that inspires and supports each other. I can’t wait to see you in
+              the arena.
             </p>
           </section>
 
