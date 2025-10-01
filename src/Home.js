@@ -156,32 +156,20 @@ const Home = () => {
 
             <div className="actors">
               <div className="box">
-                <h4>Upload your tape</h4>
-                <p>
-                  The first weekly self-tape competition app where actors
-                  compete, grow, and get rewarded.
-                </p>
+                <h4>1) Upload your tape</h4>
+               
               </div>
               <div className="box">
-                <h4>Receive Votes</h4>
-                <p>
-                  The first weekly self-tape competition app where actors
-                  compete, grow, and get rewarded.
-                </p>
+                <h4>2) Receive Votes</h4>
+                
               </div>
               <div className="box">
-                <h4>Win prizes</h4>
-                <p>
-                  The first weekly self-tape competition app where actors
-                  compete, grow, and get rewarded.
-                </p>
+                <h4>3) Win prizes</h4>
+               
               </div>
               <div className="box">
-                <h4>Build your diverse showreel</h4>
-                <p>
-                  The first weekly self-tape competition app where actors
-                  compete, grow, and get rewarded.
-                </p>
+                <h4>4) Build your diverse showreel</h4>
+               
               </div>
             </div>
           </section>
