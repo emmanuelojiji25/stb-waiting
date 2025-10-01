@@ -64,7 +64,7 @@ const content = [
   {
     question: "Do I still own my content if i upload it?",
     answer:
-      "Yes, you own your self tape. By uploading, you grant Self Tape Battle the right to use it for promotion, marketing, and showcasing winners — but ownership stays with you. More details will be outlined in our terms and conditions on app signup. ",
+      "Yes, you own your self tape. More details will be outlined in our terms and conditions on app signup."
   },
 ];
 
