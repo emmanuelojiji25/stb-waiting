@@ -13,7 +13,13 @@ const Header = () => {
     <>
       <header onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <img src={logo} className="logo" />
-        <i class="fa-solid fa-bars menu-bar"></i>
+        <div className="header-right">
+          <a href="http://instagram.com/selftapebattle" target="_blank">
+            {" "}
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <i class="fa-solid fa-bars menu-bar"></i>
+        </div>
       </header>
       <div className={`menu ${isMenuOpen ? "menu-open" : "menu-closed"}`}>
         <nav>
