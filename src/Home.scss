@@ -40,7 +40,11 @@ main h1 {
   justify-content: space-between;
   align-items: center;
   background: white;
-  border-radius: 10px;
+  border-radius: 18px;
+  
+  button{
+    border-radius:12px ;
+  }
 }
 
 input {
@@ -49,10 +53,9 @@ input {
   border-radius: 3px;
   border: none;
   background: none;
-  border-radius: 15px;
   color: black;
-  padding-left: 12px;
-  font-size: 18px;
+  padding-left: 20px;
+  font-size: 16px;
 }
 
 .test {
