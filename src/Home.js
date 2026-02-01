@@ -42,16 +42,14 @@ const Home = () => {
           style={{ transform: `translateY(-${view * 100}%)` }}
         >
           <section className="billboard">
-            <h1>Compete. Win. Get Discovered.</h1>
-            <p>
+            <h1>
               Join{" "}
               <span className="highlight">
                 <CountUp end={amount} delay={0} />
               </span>{" "}
-              actors competing in weekly self-tape battles. Earn real prizes,
-              build a diverse portfolio,
-              <br /> and get noticed by industry professionals.
-            </p>
+              other actors in the arena
+            </h1>
+            <p>Self Tape Battle is the world's first competitive acting app. Compete, vote & win big as you build a diverse portfolio visible to industry pros!</p>
             <Link to="https://app.selftapebattle.com/userAuth" target="_blank">
               <button>Enter Arena</button>
             </Link>
@@ -83,7 +81,9 @@ const Home = () => {
 
           <footer>
             <p>
-            © 2026 Self Tape Battle. Self Tape Battle® is a registered trademark of Self Tape Battle Ltd.</p>
+              © 2026 Self Tape Battle. Self Tape Battle® is a registered
+              trademark of Self Tape Battle Ltd.
+            </p>
           </footer>
         </div>
       </main>
