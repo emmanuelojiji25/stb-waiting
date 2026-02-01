@@ -6,14 +6,9 @@ main {
   flex: 1;
   padding-left: 2%;
   padding-right: 2%;
-  height: 100svh;
 
   p {
     color: #c7d6ff;
-  }
-
-  section {
-    height: 100svh;
   }
 }
 
@@ -126,7 +121,7 @@ button {
 }
 
 .billboard {
-  height: 100svh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,14 +141,15 @@ button {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  min-height: 100svh;
+
+  padding-bottom: 100px;
 
   h1 {
     margin-bottom: 50px;
   }
 }
 
-.actors{
+.actors {
   display: flex;
   gap: 10px;
 
@@ -171,12 +167,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
- 
 }
 
 section {
-  min-height: 100svh;
+  //min-height: 100svh;
   overflow-y: auto;
   padding-top: 100px;
 }
@@ -195,19 +189,17 @@ section {
 }
 
 .highlight {
- // color: rgb(119, 241, 119);
+  // color: rgb(119, 241, 119);
 }
 
-.highlight{
+.highlight {
   color: aqua;
 }
 
-.contact{
-  height: 100svh;
+.contact {
   color: white;
   display: flex;
-flex-direction: column;
-align-items: center;
-
-
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
 }
