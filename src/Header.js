@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "./star.svg";
+import logo from "./stb_full_logo.svg";
 
 import "./Header.scss";
 

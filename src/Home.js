@@ -1,5 +1,5 @@
 import "./Home.scss";
-import logo from "./star.svg";
+import logo from "./stb_full_logo.svg";
 import { db } from "./firebase";
 import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
@@ -9,6 +9,8 @@ import ConfettiExplosion from "react-confetti-explosion";
 import Accordion from "./Accordion";
 import Header from "./Header";
 import arrow from "./arrow.svg";
+import CountUp from "react-countup";
+
 const general = [
   {
     question: "What is Self Tape Battle",
@@ -103,103 +105,30 @@ const Home = () => {
       console.log(error);
     }
   };
+
   return (
     <div className="App">
       <Header />
-      <div className={`privacy-policy ${privacyPolicy}`}>
-        <p onClick={() => setPrivacyPolicy("hidden")}>Close</p>
-        <h2>Privacy Policy</h2>
-        <p>
-          At Self Tape Battle, we respect your privacy and are committed to
-          protecting your personal data. This Privacy Policy explains how we
-          collect, use, and safeguard your information in accordance with UK
-          GDPR regulations.
-          <br /> <br />
-          1. Information We Collect <br /> <br /> When you sign up to our
-          mailing list: Your email address. We do not collect any other personal
-          information on the landing page. <br />
-          <br /> 2. How We Use Your Information <br /> <br />
-          We use the information you provide to: Notify you about updates and
-          the launch of the Self Tape Battle app, share relevant news,
-          promotions, or events related to Self Tape Battle We will never sell
-          your personal data to third parties. <br /> <br /> 3. Data Retention{" "}
-          <br /> <br />
-          We will retain your email address only as long as necessary to provide
-          updates about Self Tape Battle or until you request deletion. <br />{" "}
-          <br />
-          4. Your Rights <br /> <br /> Under UK GDPR, you have the right to:
-          Access the personal data we hold about you, request corrections to
-          your data, request deletion of your data, and withdraw consent to
-          receive communications at any time. You can exercise these rights by
-          contacting us at: <b>info@selftapebattle.com</b> <br /> <br />
-          5. Data Security <br /> <br /> We implement appropriate technical and
-          organisational measures to protect your information against
-          unauthorised access, loss, or misuse. <br /> <br />
-          6. Cookies
-          <br />
-          <br /> Our landing page may use basic cookies for analytics and
-          functionality. These do not store personal information.
-          <br />
-          <br /> 7. Changes to This Policy
-          <br />
-          <br /> We may update this Privacy Policy from time to time. Any
-          changes will be posted on this page with an updated effective date.
-        </p>
-      </div>
+
       <main>
-        <div className="arrow-container">
-          <button onClick={() => handleSlide("up")} className="arrow-button">
-            <i class="fa-solid fa-arrow-up"></i>
-          </button>
-          <button onClick={() => handleSlide("down")} className="arrow-button">
-            <i class="fa-solid fa-arrow-down"></i>
-          </button>
-        </div>
         <div
           className="main-content"
           style={{ transform: `translateY(-${view * 100}%)` }}
         >
           <section className="billboard">
-            {!isUserSignedUp ? (
-              <>
-                <h1>
-                  The ultimate acting showdown is coming on the 1st of February.
-                </h1>
-                <p>
-                  Self Tape Battle is the world’s first competitive acting game
-                  — turning self-tapes into exciting weekly battles with coins,
-                  prizes, and a growing community of actors and casting
-                  directors.{" "}
-                </p>
-                <div className="input-container">
-                  <input
-                    type="text"
-                    placeholder="Enter email"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  <button onClick={() => handleSignUp()}>go</button>
-                </div>
-                <div class="waitlist-container">
-                  <img src={arrow} className="arrow" />
-                  <p className="waitlist">Join the waitlist</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <ConfettiExplosion />
-                <h1>You're in!</h1>
-                <p>
-                  We'll keep you updated via email. We can't wait to see you in
-                  the Arena.
-                </p>
-              </>
-            )}
-            <p
-              className="privacy-policy-cta"
-              onClick={() => setPrivacyPolicy("visible")}
-            >
-              Read our privacy policy
+            <h1>
+              Join{" "}
+              <span className="highlight">
+                <CountUp end={86}>86</CountUp>
+              </span>{" "}
+              other actors in the Arena
+            </h1>
+            <p>
+              Self Tape Battle is the world’s first competitive acting app —
+              turning self-tapes into exciting weekly battles with coins,
+              prizes, and a growing community of actors and casting directors.
             </p>
+            <button>Enter Arena</button>
           </section>
 
           <section className="how-it-works" id="how-it-works">
