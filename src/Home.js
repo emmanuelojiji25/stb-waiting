@@ -14,7 +14,7 @@ import CountUp from "react-countup";
 const Home = () => {
   const [view, setView] = useState(0);
 
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
 
   useEffect(() => {
     const getAmount = async () => {
@@ -46,7 +46,7 @@ const Home = () => {
             <p>
               Join{" "}
               <span className="highlight">
-                <CountUp end={amount} />
+                <CountUp end={amount} delay={0} />
               </span>{" "}
               actors competing in weekly self-tape battles. Earn real prizes,
               build a diverse portfolio,
