@@ -1,8 +1,8 @@
 import "./Home.scss";
 import logo from "./stb_full_logo.svg";
 import { db } from "./firebase";
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
-import { useState } from "react";
+import { addDoc, collection, doc, getDocs, setDoc } from "firebase/firestore";
+import { useEffect, useState } from "react";
 import Anna from "./Anna";
 import { Link } from "react-router-dom";
 import ConfettiExplosion from "react-confetti-explosion";
@@ -11,100 +11,26 @@ import Header from "./Header";
 import arrow from "./arrow.svg";
 import CountUp from "react-countup";
 
-const general = [
-  {
-    question: "What is Self Tape Battle",
-    answer:
-      " Self Tape Battle is the first acting game  where actors compete in self tape challenges, earn votes, and win prizes. It’s part competition, part portfolio builder, and part networking tool — designed to keep your craft sharp and keep you rewarded.",
-  },
-
-  {
-    question: "Will it be free to use?",
-    answer: "Yes!",
-  },
-
-  {
-    question: "Who can join?",
-    answer: (
-      <>
-        <h3>Actors</h3>
-        <p>
-          Any actor based in the UK (for now). Whether you’re just starting out
-          or you’ve been on stage and screen for years, Self Tape Battle is for
-          you.
-        </p>
-        <h3>Casting Directors</h3>
-        <p>
-          Casting directors who are looking for fresh talent can look through a
-          pool of versatile performances.
-        </p>
-      </>
-    ),
-  },
-];
-
-const voting = [
-  {
-    question: "What prizes can I win?",
-    answer:
-      "From acting-related goodies to in-app coins that can be cashed out — prizes change each battle. For our launch battles, prizes will include an annual Spotlight membership, and a professional headshot session.",
-  },
-  {
-    question: "How do coins work and how do I cash out?",
-    answer:
-      "Coins are earned through winning battles and other activities. Once you hit the cash-out threshold, you can convert them to real money or spend them in-app.",
-  },
-];
-
-const content = [
-  {
-    question: "Who can see my self tapes?",
-    answer:
-      " You choose! Make your profile public so anyone can view your tapes, or keep it private so only registered users can see them. Casting directors will always be able to view your content.",
-  },
-
-  {
-    question: "Do I still own my content if i upload it?",
-    answer:
-      "Yes, you own your self tape. More details will be outlined in our terms and conditions on app signup.",
-  },
-];
-
 const Home = () => {
-  const [isUserSignedUp, setIsUserSignedUp] = useState(false);
-
-  const [email, setEmail] = useState("");
-
   const [view, setView] = useState(0);
 
-  const [privacyPolicy, setPrivacyPolicy] = useState("hidden");
+  const [amount, setAmount] = useState(0);
 
-  const handleSlide = (direction) => {
-    console.log("clicked");
-    if (direction === "up" && view > 0) {
-      setView(view - 1);
-      console.log("up");
-    }
+  useEffect(() => {
+    const getAmount = async () => {
+      const usersRef = collection(db, "users");
 
-    if (direction === "down" && view < 3) {
-      setView(view + 1);
-      console.log("down");
-    }
-  };
+      try {
+        const usersSnapshot = await getDocs(usersRef);
 
-  const handleSignUp = async () => {
-    try {
-      const ref = doc(db, "mailing", email);
+        setAmount(usersSnapshot.size);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-      await setDoc(ref, {
-        email: email,
-      });
-
-      setIsUserSignedUp(true);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    getAmount();
+  });
 
   return (
     <div className="App">
@@ -116,19 +42,19 @@ const Home = () => {
           style={{ transform: `translateY(-${view * 100}%)` }}
         >
           <section className="billboard">
-            <h1>
+            <h1>Compete. Win. Get Discovered.</h1>
+            <p>
               Join{" "}
               <span className="highlight">
-                <CountUp end={86}>86</CountUp>
+                <CountUp end={amount} />
               </span>{" "}
-              other actors in the Arena
-            </h1>
-            <p>
-              Self Tape Battle is the world’s first competitive acting app —
-              turning self-tapes into exciting weekly battles with coins,
-              prizes, and a growing community of actors and casting directors.
+              actors competing in weekly self-tape battles. Earn real prizes,
+              build a diverse portfolio,
+              <br /> and get noticed by industry professionals.
             </p>
-            <button>Enter Arena</button>
+            <Link to="https://app.selftapebattle.com/userAuth" target="_blank">
+              <button>Enter Arena</button>
+            </Link>
           </section>
 
           <section className="how-it-works" id="how-it-works">
@@ -136,74 +62,25 @@ const Home = () => {
 
             <div className="actors">
               <div className="box">
-                <h4>1) Upload your tape</h4>
+                <h4>Upload your tape</h4>
               </div>
               <div className="box">
-                <h4>2) Receive Votes</h4>
+                <h4>Vote & Receive Votes</h4>
               </div>
               <div className="box">
-                <h4>3) Win prizes</h4>
+                <h4>Win prizes</h4>
               </div>
               <div className="box">
-                <h4>4) Build your diverse showreel</h4>
+                <h4>Build your diverse showreel</h4>
               </div>
             </div>
           </section>
 
-          <section className="about" id="about">
-            <h1>About</h1>
-            <p>
-              Hi, I’m Emmanuel, the founder of Self Tape Battle. As an actor,
-              designer, and developer, I wanted to create something fresh for
-              our industry. A space where actors can compete, grow, and get
-              rewarded while doing what they love. Acting can often feel
-              isolating, expensive, and cut-throat. Self Tape Battle flips that
-              on its head by making self tapes fun, social, and rewarding. This
-              started as my passion project, but it’s really about building a
-              community that inspires and supports each other. I can’t wait to
-              see you in the arena.
-            </p>
+          <section className="contact">
+            
+            <h1>For all enquiries:</h1>
+            <p>info@selftapebattle.com</p>
           </section>
-
-          <section className="faq-container" id="faq">
-            <h1>FAQ</h1>
-            <p>
-              These should answer some questions you probably have for now. More
-              questions? No problemo! Reach out to us at info@selftapebattle.com
-            </p>
-            <div className="faq-inner">
-              <div className="category-container">
-                <h2>General</h2>
-                {general.map((question) => (
-                  <Accordion
-                    question={question.question}
-                    answer={question.answer}
-                  />
-                ))}
-              </div>
-
-              <div className="category-container">
-                <h2>Voting & Prizes</h2>
-                {voting.map((question) => (
-                  <Accordion
-                    question={question.question}
-                    answer={question.answer}
-                  />
-                ))}
-              </div>
-              <div className="category-container">
-                <h2>Copyright & Content</h2>
-                {content.map((question) => (
-                  <Accordion
-                    question={question.question}
-                    answer={question.answer}
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <div className="contact"></div>
         </div>
       </main>
     </div>
