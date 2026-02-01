@@ -77,10 +77,14 @@ const Home = () => {
           </section>
 
           <section className="contact">
-            
             <h1>For all enquiries:</h1>
             <p>info@selftapebattle.com</p>
           </section>
+
+          <footer>
+            <p>
+            © 2026 Self Tape Battle. Self Tape Battle® is a registered trademark of Self Tape Battle Ltd.</p>
+          </footer>
         </div>
       </main>
     </div>
