@@ -47,7 +47,7 @@ const Home = () => {
               <span className="highlight">
                 <CountUp end={amount} delay={0} />
               </span>{" "}
-              other actors in the arena
+              other<br/> actors in the arena
             </h1>
             <p>Self Tape Battle is the world's first competitive acting app. Compete, vote & win big as you build a diverse portfolio visible to industry pros!</p>
             <Link to="https://app.selftapebattle.com/userAuth" target="_blank">
