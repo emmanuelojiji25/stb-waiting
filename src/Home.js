@@ -14,7 +14,7 @@ import CountUp from "react-countup";
 const Home = () => {
   const [view, setView] = useState(0);
 
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState("");
 
   useEffect(() => {
     const getAmount = async () => {
@@ -45,7 +45,7 @@ const Home = () => {
             <h1>
               Join{" "}
               <span className="highlight">
-                <CountUp end={amount} delay={0} />
+                {amount}
               </span>{" "}
               other<br/> actors in the arena
             </h1>
