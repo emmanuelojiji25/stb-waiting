@@ -10,6 +10,7 @@ import Accordion from "./Accordion";
 import Header from "./Header";
 import arrow from "./arrow.svg";
 import CountUp from "react-countup";
+import { ElfsightWidget } from "react-elfsight-widget";
 
 const Home = () => {
   const [view, setView] = useState(0);
@@ -35,7 +36,6 @@ const Home = () => {
   return (
     <div className="App">
       <Header />
-
       <main>
         <div
           className="main-content"
@@ -47,9 +47,14 @@ const Home = () => {
               <span className="highlight">
                 {<CountUp end={amount} delay={0} />}
               </span>{" "}
-              other<br/> actors in the arena
+              other
+              <br /> actors in the arena
             </h1>
-            <p>Self Tape Battle is the world's first competitive acting app. Compete, vote & win big as you build a diverse portfolio visible to industry pros!</p>
+            <p>
+              Self Tape Battle is the world's first competitive acting app.
+              Compete, vote & win big as you build a diverse portfolio visible
+              to industry pros!
+            </p>
             <Link to="https://app.selftapebattle.com/userAuth" target="_blank">
               <button>Enter Arena</button>
             </Link>
@@ -74,6 +79,14 @@ const Home = () => {
             </div>
           </section>
 
+          <div className="instagram-widget">
+            <div
+              class="elfsight-app-e575befb-b430-469d-bcf7-6e4ae8ab7fff"
+              data-elfsight-app-lazy
+            ></div>
+            <div className="blocker"></div>
+          </div>
+
           <section className="contact">
             <h1>For all enquiries:</h1>
             <p>info@selftapebattle.com</p>
@@ -86,6 +99,7 @@ const Home = () => {
             </p>
           </footer>
         </div>
+        <section></section>
       </main>
     </div>
   );
