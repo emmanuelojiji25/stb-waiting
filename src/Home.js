@@ -45,7 +45,7 @@ const Home = () => {
             <h1>
               Join{" "}
               <span className="highlight">
-                {amount}
+                {<CountUp end={amount} delay={0} />}
               </span>{" "}
               other<br/> actors in the arena
             </h1>
