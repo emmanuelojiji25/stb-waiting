@@ -60,7 +60,7 @@ const Home = () => {
 
             <div className="actors">
               <div className="box">
-                <h4>Upload your tape</h4>
+                <h4>Upload your tape and sharpen your skills</h4>
               </div>
               <div className="box">
                 <h4>Vote & Receive Votes</h4>
