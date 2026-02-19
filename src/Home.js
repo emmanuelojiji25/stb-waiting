@@ -1,7 +1,15 @@
 import "./Home.scss";
 import logo from "./stb_full_logo.svg";
 import { db } from "./firebase";
-import { addDoc, collection, doc, getDocs, setDoc } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Anna from "./Anna";
 import { Link } from "react-router-dom";
@@ -21,8 +29,10 @@ const Home = () => {
     const getAmount = async () => {
       const usersRef = collection(db, "users");
 
+      const q = query(usersRef, where("role", "!=", "admin"));
+
       try {
-        const usersSnapshot = await getDocs(usersRef);
+        const usersSnapshot = await getDocs(q);
 
         setAmount(usersSnapshot.size);
       } catch (error) {
